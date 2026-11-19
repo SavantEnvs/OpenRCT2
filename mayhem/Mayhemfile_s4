@@ -1,0 +1,10 @@
+project: savantenvs/OpenRCT2
+target: s4
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/s4/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_s4
+    libfuzzer: true
+    max_length: 524288
+    timeout: 30

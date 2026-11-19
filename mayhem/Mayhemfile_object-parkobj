@@ -1,0 +1,10 @@
+project: savantenvs/OpenRCT2
+target: object-parkobj
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/object-parkobj/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_object_parkobj
+    libfuzzer: true
+    max_length: 131072
+    timeout: 30

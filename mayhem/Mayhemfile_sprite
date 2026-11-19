@@ -1,0 +1,10 @@
+project: savantenvs/OpenRCT2
+target: sprite
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sprite/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_sprite
+    libfuzzer: true
+    max_length: 65536
+    timeout: 30

@@ -1,0 +1,9 @@
+project: savantenvs/OpenRCT2
+target: replay
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/replay/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_replay
+    libfuzzer: true
+    timeout: 10

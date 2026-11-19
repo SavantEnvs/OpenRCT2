@@ -1,0 +1,10 @@
+project: savantenvs/OpenRCT2
+target: sea
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sea/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_sea
+    libfuzzer: true
+    max_length: 524288
+    timeout: 30

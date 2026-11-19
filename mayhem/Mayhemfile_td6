@@ -1,0 +1,9 @@
+project: savantenvs/OpenRCT2
+target: td6
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/td6/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_td6
+    libfuzzer: true
+    timeout: 30

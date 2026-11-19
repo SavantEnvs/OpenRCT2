@@ -1,0 +1,10 @@
+project: savantenvs/OpenRCT2
+target: title-sequence
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/title-sequence/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_title_sequence
+    libfuzzer: true
+    max_length: 65536
+    timeout: 30

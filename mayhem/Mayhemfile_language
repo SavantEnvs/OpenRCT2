@@ -1,0 +1,10 @@
+project: savantenvs/OpenRCT2
+target: language
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/language/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_language
+    libfuzzer: true
+    max_length: 65536
+    timeout: 30

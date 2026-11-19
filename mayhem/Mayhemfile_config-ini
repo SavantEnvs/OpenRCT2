@@ -1,0 +1,9 @@
+project: savantenvs/OpenRCT2
+target: config-ini
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/config-ini/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_config_ini
+    libfuzzer: true
+    timeout: 30

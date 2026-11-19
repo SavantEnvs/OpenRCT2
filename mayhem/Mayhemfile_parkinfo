@@ -1,0 +1,10 @@
+project: savantenvs/OpenRCT2
+target: parkinfo
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parkinfo/testsuite
+cmds:
+  - cmd: /mayhem/bin/fuzz_parkinfo
+    libfuzzer: true
+    max_length: 524288
+    timeout: 30
